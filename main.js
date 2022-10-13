@@ -19,7 +19,8 @@ const prompt = require('prompt-sync')({sigint: true});
 
 
 //function to generate fish
-
+console.log(``);
+console.log(`++++++++++++++++++++++++++++++++++++++++++++++++++++++++++`);
 console.log(`You've gone fishing! Try to maximize the value of your caught fish. You can fish
 for six hours (till 12:00pm) and can catch at most 10 lbs of fish.`);
 console.log(`++++++++++++++++++++++++++++++++++++++++++++++++++++++++++`);
@@ -39,23 +40,25 @@ function randomlyGeneratedFish(){
 //local variables
 let fishArray = ['Slimy Scaly Bass', 'Deepsea Finned Salmon','Purple Bigmouthed Herring', 'Grey Bottom-dwelling Angler',]
 let randomFish =fishArray[Math.floor(Math.random() * fishArray.length)];
-let randomPrice = Math.floor(Math.random() * 100);
+let randomPrice = Math.floor(Math.random() * 100.1);
 let randomWeight = Math.floor(Math.random() * 10);
 
 
 // Telling the time Message
 if (timer < 11) 
 {
-console.log(`the time is ${timer}:00am so far you have caught ${fishCounter} fish,`)
+console.log(`The time is ${timer}:00am so far you have caught ${fishCounter} fish,`)
+console.log('');
 //random fish message
-console.log(`You caught a ${randomFish} weighing ${randomWeight} lbs and valued at ${randomPrice}`);
+console.log(`You caught a ${randomFish} weighing ${randomWeight} lbs and valued at $${randomPrice}`);
 
 //prompt to catch or release
-let catchOrRelease = prompt(`Your action: [c]atch or [r]elease?`);
+let catchOrRelease = prompt(`Your action: [c]atch or [r]elease? `);
 catchOrRelease = catchOrRelease.toLocaleLowerCase();
     
        if (catchOrRelease === "c")
        {
+        console.log("")
         console.log ("You choose to catch the fish!")
         counter +=1;
         timer +=1;
@@ -73,14 +76,10 @@ catchOrRelease = catchOrRelease.toLocaleLowerCase();
             for (let i = 0; i > fishArray.length; i++){
              fishArray2[i];
             }
-
             console.log(fishArray2);
-
             } else 
             {
-
            randomlyGeneratedFish()
-           
             }
 
        } else {
@@ -111,3 +110,5 @@ catchOrRelease = catchOrRelease.toLocaleLowerCase();
 
 
 randomlyGeneratedFish();
+
+
