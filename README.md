@@ -124,4 +124,3 @@ fish are biting.
 Add a mechanism that allows the user the ability to release fish caught on a
 previous turn. That way the fisher won't have to worry about filling up their
 net with low-value fish.
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=couchmeka&theme=blue-green)
