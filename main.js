@@ -72,7 +72,7 @@ catchOrRelease = catchOrRelease.toLocaleLowerCase();
         //if statement for the weight tracking
         if(actualWeight >= 10){
 
-            console.log(`Your Pack is full and you cannot store anymore fish. You have ${fishCounter} fish`)
+            console.log(`Your Pack is full and you cannot store anymore fish. You have ${fishCounter} fish priced at ${finalPrice}`)
            
             for (let i = 0; i > fishArray.length; i++){
              fishArray2[i];
@@ -86,6 +86,7 @@ catchOrRelease = catchOrRelease.toLocaleLowerCase();
        } else {
         //release fish messages
         console.log ("You released the fish")
+        timer +=1;
         
         
         if (fishArray2.length >= 1)
@@ -111,5 +112,3 @@ catchOrRelease = catchOrRelease.toLocaleLowerCase();
 
 
 randomlyGeneratedFish();
-
-
