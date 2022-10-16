@@ -38,11 +38,12 @@ let fishArray2 = [];
 function randomlyGeneratedFish(){
 
 //local variables
+let index = 0
 let fishArray = ['Slimy Scaly Bass', 'Deepsea Finned Salmon','Purple Bigmouthed Herring', 'Grey Bottom-dwelling Angler',]
 let randomFish =fishArray[Math.floor(Math.random() * fishArray.length)];
-let randomPrice = Math.floor(Math.random() * 100.1);
+let randomPrice = (Math.random()*100).toString().substring(0, 4);
 let randomWeight = Math.floor(Math.random() * 10);
-
+randomPrice = Number(randomPrice);
 
 // Telling the time Message
 if (timer < 11) 
