@@ -50,6 +50,7 @@ if (timer < 11)
 {
 console.log(`The time is ${timer}:00am so far you have caught ${fishCounter} fish,`)
 console.log('');
+console.log(`You've gone fishing!`)
 //random fish message
 console.log(`You caught a ${randomFish} weighing ${randomWeight} lbs and valued at $${randomPrice}`);
 
@@ -72,7 +73,7 @@ catchOrRelease = catchOrRelease.toLocaleLowerCase();
         //if statement for the weight tracking
         if(actualWeight >= 10){
 
-            console.log(`Your Pack is full and you cannot store anymore fish. You have ${fishCounter} fish priced at ${finalPrice}`)
+            console.log(`Your Pack is full and you cannot store anymore fish. You have ${fishCounter} fish priced at ${finalPrice.toString().substring(0, 4)}`)
            
             for (let i = 0; i > fishArray.length; i++){
              fishArray2[i];
@@ -85,8 +86,8 @@ catchOrRelease = catchOrRelease.toLocaleLowerCase();
 
        } else {
         //release fish messages
-        console.log ("You released the fish")
         timer +=1;
+        console.log ("You released the fish")
         
         
         if (fishArray2.length >= 1)
